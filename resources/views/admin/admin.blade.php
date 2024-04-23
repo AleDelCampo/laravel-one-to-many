@@ -11,8 +11,8 @@
 </div>
 
 <div class="container text-center mt-4">
-    <a href="{{ route('projects.create') }}" class="btn btn-success">Crea Nuovo Progetto</a>
-    <a href="{{ route('admin.types.create') }}" class="btn btn-success">Crea Nuova Categoria</a>
+    <a href="{{ route('projects.create') }}" class="btn btn-outline-success">Crea Nuovo Progetto</a>
+    <a href="{{ route('admin.types.create') }}" class="btn btn-outline-success">Crea Nuova Categoria</a>
 </div>
 
 <div class="d-flex justify-content-center text-center gap-4 mt-5">
@@ -29,11 +29,11 @@
             </div>
             <p>Tecnologia: {{ $project->technology }}</p>
             <div class="d-flex justify-content-center gap-4">   
-                <a href="{{ route('projects.edit', ['project' => $project->id]) }}" class="btn btn-primary">Modifica</a>
+                <a href="{{ route('projects.edit', ['project' => $project->id]) }}" class="btn btn-outline-primary">Modifica</a>
                 <form action="{{ route('projects.destroy', ['project' => $project->id]) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Elimina</button>
+                    <button type="submit" class="btn btn-outline-danger">Elimina</button>
                 </form>
             </div>
         </div>
