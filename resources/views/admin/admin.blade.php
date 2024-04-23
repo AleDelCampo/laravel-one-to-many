@@ -12,6 +12,7 @@
 
 <div class="container text-center mt-4">
     <a href="{{ route('projects.create') }}" class="btn btn-success">Crea Nuovo Progetto</a>
+    <a href="{{ route('admin.types.create') }}" class="btn btn-success">Crea Nuova Categoria</a>
 </div>
 
 <div class="d-flex justify-content-center text-center gap-4 mt-5">

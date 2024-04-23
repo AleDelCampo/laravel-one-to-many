@@ -32,17 +32,19 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::prefix('admin')->group(function () {
         Route::resource('projects', AdminProjectController::class);
+        Route::resource('types', TypeController::class);
     });
 });
 
 require __DIR__.'/auth.php';
 
-Route::get('/', [ProjectController::class, 'index']);
-
 Route::get('/admin', [AdminProjectController::class, 'index'])->middleware(['auth'])->name('admin');
 
 //Rotta accessibile a tutti per la sola Visualizzazione.
 
+Route::get('/', [ProjectController::class, 'index']);
+
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 
-Route::resource('types', TypeController::class);
+Route::get('/admin/types/create', [TypeController::class, 'create'])->name('admin.types.create');   
+Route::post('/admin/types', [TypeController::class, 'store'])->name('admin.types.store');
