@@ -19,6 +19,7 @@
         <div class="pointer">
             <h2>{{ $project->title }}</h2>
             <p>{{ $project->description }}</p>
+            <small>{{ $project->type?->title }}</small>
 
             {{-- Questo è il metodo utilizzato per l'assegnazione dell'immagine attraverso l'inserimento tramite il nostro server (momentaneamente cartelle del PC) --}}
 

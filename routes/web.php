@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TypeController;
 use App\Http\Controllers\Admin\AdminProjectController;
 
 /*
@@ -44,3 +45,4 @@ Route::get('/admin', [AdminProjectController::class, 'index'])->middleware(['aut
 
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 
+Route::resource('types', TypeController::class);

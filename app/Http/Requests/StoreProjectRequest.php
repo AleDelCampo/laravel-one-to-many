@@ -28,6 +28,7 @@ class StoreProjectRequest extends FormRequest
             'description' => 'required|max:8000',
             'image' => 'file|max:1024|nullable|mimes:jpg,png',
             'technology' => 'nullable',
+            'type_id' => 'nullable|exists:types,id'
         ];
     }
 
@@ -39,7 +40,8 @@ class StoreProjectRequest extends FormRequest
             'description.required' => 'Facci capire almeno cosa sia!!',
             'description.max' => "Puoi usare al massimo :max caratteri",
             'image.mimes' => "Inserisci un immagine",
-            'image.max' => "Peso limite 1024 KB"
+            'image.max' => "Peso limite 1024 KB",
+            'type_id.exists' => "PERCHE' NON PROVI AD HACKERARMI I ...."
         ];
     }
 }

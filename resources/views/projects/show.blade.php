@@ -8,6 +8,7 @@
    
     <div class="pointer">
         <h2>{{ $project->title }}</h2>
+            <small>{{ $project->types?->title }}</small>
         <p>{{ $project->description }}</p>
         <div class="mb-2">
             <img class="img-size" src="{{ asset('storage/' . $project->image) }}" alt="Copertina immagine">
@@ -16,6 +17,6 @@
     </div>
 
 </div>
-    
+
 </body>
 @endsection

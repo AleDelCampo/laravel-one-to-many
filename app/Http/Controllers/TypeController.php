@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
-use App\Http\Requests\StoreProjectRequest;
-use App\Http\Requests\UpdateProjectRequest;
+use App\Models\Type;
+use App\Http\Requests\StoreTypeRequest;
+use App\Http\Requests\UpdateTypeRequest;
 
-class ProjectController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $projects = Project::all();
-        
-        return view('index', compact('projects'));
+        $types = Type::all();
+
+        return view('index', compact('types'));
     }
 
     /**
@@ -29,7 +29,7 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProjectRequest $request)
+    public function store(StoreTypeRequest $request)
     {
         //
     }
@@ -37,15 +37,15 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Project $project)
+    public function show(Type $type)
     {
-        return view('projects.show', compact('project'));
+        return view('admin.show', compact('type'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Project $project)
+    public function edit(Type $type)
     {
         //
     }
@@ -53,7 +53,7 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProjectRequest $request, Project $project)
+    public function update(UpdateTypeRequest $request, Type $type)
     {
         //
     }
@@ -61,7 +61,7 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Project $project)
+    public function destroy(Type $type)
     {
         //
     }
