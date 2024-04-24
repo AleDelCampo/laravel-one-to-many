@@ -46,5 +46,10 @@ Route::get('/', [ProjectController::class, 'index']);
 
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 
-Route::get('/admin/types/create', [TypeController::class, 'create'])->name('admin.types.create');   
+Route::get('/admin/types', [TypeController::class, 'show'])->name('admin.types.show');
+
+Route::delete('/admin/types/{type}', [TypeController::class, 'destroy'])->name('admin.types.destroy');
+
+Route::get('/admin/types/create', [TypeController::class, 'create'])->name('admin.types.create');
+
 Route::post('/admin/types', [TypeController::class, 'store'])->name('admin.types.store');

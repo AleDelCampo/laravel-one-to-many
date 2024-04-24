@@ -15,7 +15,7 @@
         </div>
         <p>Tecnologia: {{ $project->technology }}</p>
     </div>
-
+    
 </div>
 
 </body>

@@ -17,7 +17,7 @@
 
       <div class="mb-3">
         <label for="description" class="form-label">Descrizione:</label>
-        <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+        <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary">Salva Categoria</button>

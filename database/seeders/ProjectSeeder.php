@@ -19,14 +19,12 @@ class ProjectSeeder extends Seeder
             'title' => 'Boolzapp',
             'description' => 'WebApp di messaggistica',
             'image' => 'https://store-images.s-microsoft.com/image/apps.8453.13518859748920827.4d7dd838-9f34-4ad2-9cd7-b861c6398fc1.11cbb3d4-ffd9-42c1-82bd-e3f305d562b1',
-            'technology' => 'Js, Vue',
         ]);
 
         Project::create([
             'title' => 'Boolflix',
             'description' => 'WebApp di streaming',
             'image' => 'https://yt3.googleusercontent.com/i0PPodnHGyWQ9m2XSQ2pjzxhKfSwoK2eI2DlcFjFdsmLqE3jMhBkkh-Hihato9qMcZf9t1ekFQ=s900-c-k-c0x00ffffff-no-rj',
-            'technology' => 'Js, Vue',
         ]);
     }
 }

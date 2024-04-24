@@ -12,6 +12,7 @@
 
 <div class="container text-center mt-4">
     <a href="{{ route('projects.create') }}" class="btn btn-outline-success">Crea Nuovo Progetto</a>
+    <a href="{{ route('admin.types.show') }}"  class="btn btn-outline-success">Visualizza Categorie</a>
     <a href="{{ route('admin.types.create') }}" class="btn btn-outline-success">Crea Nuova Categoria</a>
 </div>
 

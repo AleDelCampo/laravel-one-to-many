@@ -16,7 +16,7 @@ class Project extends Model
 
     //Le Fillable sono coloro che ci permettono di "pulire" il Controller utilizzato per i valori che diamo invece come Fillable.
     //Esse servono anche per un fattore di Validazione, nel senso che tramite esse decidiamo cosa dare a vedere.
-    protected $fillable = ['title', 'description', 'technology', 'type_id'];
+    protected $fillable = ['title', 'description', 'type_id'];
 
     public function type() {
         return $this->belongsTo(Type::class);
